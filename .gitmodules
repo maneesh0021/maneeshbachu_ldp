@@ -1,0 +1,3 @@
+[submodule "git_pratice"]
+	path = git_pratice
+	url = https://github.com/maneesh0021/git_pratice.git
