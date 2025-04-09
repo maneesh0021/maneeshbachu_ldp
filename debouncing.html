@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Search with Debounce and Throttle</title>
+</head>
+<body>
+
+  <h2>Search Bar</h2>
+  <input type="text" id="searchInput" placeholder="Type to search..." />
+
+  <script>
+    // Simulated "search" function
+    function performSearch(query) {
+      console.log("Searching for:", query);
+    }
+
+    // Debounce function
+    function debounce(func, delay) {
+      let timer;
+      return function (...args) {
+        clearTimeout(timer);
+        timer = setTimeout(() => {
+          func.apply(this, args);
+        }, delay);
+      };
+    }
+
+    const debouncedSearch = debounce(performSearch, 500);
+    const input = document.getElementById('searchInput');
+
+    // Debounce Search
+
+    input.addEventListener('input', (e) => {
+      debouncedSearch(e.target.value);
+    });
+
+  </script>
+</body>
+</html>
