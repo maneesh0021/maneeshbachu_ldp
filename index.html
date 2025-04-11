@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Restaurant Billing</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="header-left"><h1>Restaurant Billing</h1></div>
+    <div class="header-right">
+      <div class="dropdown">
+        <button class="header-btn" id="menuDropdownBtn"><i class="fas fa-bars"></i>Menu</button>
+        <div class="dropdown-menu" id="menuDropdown">
+          <div class="dropdown-item" data-course="ALL">ALL</div>
+          <div class="dropdown-item" data-course="Main Course">Main Course</div>
+          <div class="dropdown-item" data-course="Desserts">Desserts</div>
+          <div class="dropdown-item" data-course="Beverages">Beverages</div>
+          <div class="dropdown-item" data-course="Appetizers">Appetizers</div>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button class="header-btn" id="tableDropdownBtn"><i class="fas fa-table"></i>Tables</button>
+        <div class="dropdown-menu" id="tableDropdown">
+          <div id="tableList"></div>
+          <div class="dropdown-item" id="addTableBtn">+ Add Table</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="sidebar">
+      <div class="search-container">
+        <input type="text" id="tableSearch" placeholder="Search table..." />
+        <span class="clear-btn"><i class="fas fa-times"></i></span>
+      </div>
+      <div id="tables"></div>
+    </div>
+    <div class="main">
+      <div class="search-container">
+        <input type="text" id="menuSearch" placeholder="Search menu..." />
+        <span class="clear-btn"><i class="fas fa-times"></i></span>
+      </div>
+      <div id="menu"></div>
+    </div>
+  </div>
+
+  <div id="modal" class="modal">
+    <div class="modal-content" id="modalContent"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
