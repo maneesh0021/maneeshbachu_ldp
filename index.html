@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Restaurant Billing</title>
@@ -54,5 +55,103 @@
   </div>
 
   <script src="script.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bachu Maneesh - Portfolio</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <a href="#" class="logo">BACHU MANEESH</a>
+
+            <!-- Hamburger Menu Checkbox -->
+            <input type="checkbox" id="menu-toggle">
+            
+            <!-- Hamburger Icon -->
+            <label for="menu-toggle" class="hamburger">&#9776;</label>
+
+            <!-- Navigation Menu -->
+            <nav class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home">
+        <div class="home-container">
+            <div class="home-image">
+                <img src="m1.jpeg" alt="Profile Image">
+            </div>
+            <div class="home-content">
+                <h1>BACHU MANEESH</h1>
+                <h2>Dev Intern - Zemoso Tech</h2>
+                <div class="social-icons">
+                    <a href="https://github.com/maneesh0021" target="_blank">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="https://www.linkedin.com/in/b-maneesh2103/" target="_blank">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="about-container">
+            <h1>ABOUT ME</h1>
+            <p>
+                I'm <strong>Bachu Maneesh</strong>, a <strong>Computer Science Engineer</strong> specializing in <strong>Java Backend Development</strong>. 
+                I have experience in <strong>Java, Python, HTML, CSS, and Microsoft Azure</strong>. I am an aspiring Backend Developer with a strong foundation in Java, SQL, and backend technologies. Passionate about building scalable and efficient server-side applications, I focus on designing robust architectures and optimizing database interactions.
+                With hands-on experience in Java development, including internships at <strong>Young Minds Technology and Techno Hacks</strong>, I have worked on coding, debugging, and testing backend systems. I also led a Library Management System project, where I digitalized library functions using SQL, integrating a seamless database-driven experience. <strong>I am committed to continuous learning and staying updated with the latest advancements in backend development, system architecture, and database optimization.</strong>
+            </p>
+        </div>
+    </section>
+    
+    <section id="gallery">
+        <div class="gallery-container">
+            <h1>GALLERY</h1>
+            <div class="gallery-images">
+                <img src="m2.jpeg" alt="Gallery Image 1">
+                <img src="m3.jpeg" alt="Gallery Image 2">
+                <img src="m4.jpeg" alt="Gallery Image 3">
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="contact-container">
+            <h1 style="text-align: center;">CONTACT ME</h1>
+            <form action="submit.html" method="get" target="_blank">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required minlength="3" maxlength="50">
+                
+                <label for="mobile">Mobile Number:</label>
+                <input type="tel" id="mobile" name="mobile" maxlength="10" placeholder="Your Mobile Number" pattern="[0-9]{10}" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Bachu Maneesh. All rights reserved.</p>
+    </footer>
 </body>
 </html>
