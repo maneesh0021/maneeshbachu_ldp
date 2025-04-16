@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,7 +11,7 @@
   <script>
     // Simulated "search" function
     function performSearch(query) {
-      console.log("Searching for:", query);
+      // Search logic here (currently empty)
     }
 
     // Throttle function
@@ -30,12 +29,10 @@
     const throttledSearch = throttle(performSearch, 1000);
     const input = document.getElementById('searchInput');
 
-    //Throttled Search 
-
+    // Throttled Search 
     input.addEventListener('input', (e) => {
-    throttledSearch(e.target.value);
+      throttledSearch(e.target.value);
     });
-
   </script>
 </body>
 </html>
