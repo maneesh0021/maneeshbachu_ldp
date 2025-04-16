@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Storage Score Tracker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 400px;
+      margin: 50px auto;
+      text-align: center;
+    }
+    h2 {
+      color: #333;
+    }
+    p {
+      font-size: 18px;
+    }
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h2>Storage Score Tracker</h2>
+  <p><strong>Local Score:</strong> <span id="localScore">0</span></p>
+  <p><strong>Session Score:</strong> <span id="sessionScore">0</span></p>
+  <button onclick="incrementScores()">Increment Scores</button>
+  <button onclick="resetScores()">Reset Scores</button>
+
+  <script>
+    // Initialize scores from storage or set to 0
+    let localScore = parseInt(localStorage.getItem("localScore")) || 0;
+    let sessionScore = parseInt(sessionStorage.getItem("sessionScore")) || 0;
+
+    // Display scores
+    document.getElementById("localScore").textContent = localScore;
+    document.getElementById("sessionScore").textContent = sessionScore;
+
+    // Function to increment both scores
+    function incrementScores() {
+      localScore++;
+      sessionScore++;
+      localStorage.setItem("localScore", localScore);
+      sessionStorage.setItem("sessionScore", sessionScore);
+      updateDisplay();
+    }
+
+    // Function to reset both scores
+    function resetScores() {
+      localScore = 0;
+      sessionScore = 0;
+      localStorage.setItem("localScore", 0);
+      sessionStorage.setItem("sessionScore", 0);
+      updateDisplay();
+    }
+
+    // Update score display
+    function updateDisplay() {
+      document.getElementById("localScore").textContent = localScore;
+      document.getElementById("sessionScore").textContent = sessionScore;
+    }
+  </script>
+</body>
+</html>
