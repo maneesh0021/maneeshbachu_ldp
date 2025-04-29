@@ -1,0 +1,14 @@
+.table-row {
+  background-color: #111;
+  border-top: 1px solid #333;
+}
+
+.row-selected {
+  background-color: #333 !important;
+  transition: background-color 0.3s ease;
+}
+
+input[type="checkbox"] {
+  transform: scale(1.2);
+  cursor: pointer;
+}
