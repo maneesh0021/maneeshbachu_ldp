@@ -1,6 +1,7 @@
 import React from "react";
-import { Typography, Box } from "@mui/material";
+import {  Box } from "@mui/material";
 import Icon from "../../atoms/Icon";
+import CustomTypography from "../../atoms/Typography";
 
 export interface IconLabelProps {
   icon: string;
@@ -13,7 +14,7 @@ const IconLabel: React.FC<IconLabelProps> = ({ icon, text }) => {
       <Box mr={1.5}>
         <Icon src={icon} />
       </Box>
-      <Typography>{text}</Typography>
+      <CustomTypography>{text}</CustomTypography>
     </Box>
   );
 };
