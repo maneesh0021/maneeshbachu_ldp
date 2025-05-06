@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Box, Typography, styled } from "@mui/material";
+import { Box, styled } from "@mui/material";
+import { Typography} from "@mui/material";
 import IconLabel from "../../molecules/IconLabel";
 import { NAV_ITEMS } from "../../../utils/constants";
 
