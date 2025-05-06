@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Box, styled } from "@mui/material";
-import { Typography} from "@mui/material";
 import IconLabel from "../../molecules/IconLabel";
 import { NAV_ITEMS } from "../../../utils/constants";
+import CustomTypography from "../../atoms/Typography";
 
 export interface SidebarProps {
   selected: string;
@@ -15,8 +15,11 @@ const SidebarContainer = styled(Box)({
   padding: "0.90rem",
 });
 
-const SidebarTitle = styled(Typography)({
+const SidebarTitle = styled(CustomTypography)({
   marginBottom: "1rem",
+  fontWeight: "bold",
+  fontSize: "1.25rem",
+  color: "#000",
 });
 
 const NavItem = styled(Box)<{ isSelected: boolean }>(({ isSelected }) => ({
@@ -44,9 +47,7 @@ const Sidebar: React.FC<SidebarProps> = ({ selected, setSelected }) => {
 
   return (
     <SidebarContainer>
-      <SidebarTitle variant="h6" color="textPrimary">
-        RECRUIT
-      </SidebarTitle>
+      <SidebarTitle variant="h6">RECRUIT</SidebarTitle>
       {NAV_ITEMS.map((item) => (
         <NavItem
           key={item?.label}
