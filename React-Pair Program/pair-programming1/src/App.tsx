@@ -1,20 +1,30 @@
 import { useState } from "react";
 import Sidebar from "./components/organisms/SideBar";
-import { Box, Typography } from "@mui/material";
-import "./App.css";
+import { Box } from "@mui/material";
+import CustomTypography from "../../atoms/Typography";
+import { styled } from "@mui/system"; 
+
+const StyledBox = styled(Box)`
+  display: flex;
+  height: 100vh;
+`;
+
+const StyledTypography = styled(CustomTypography)`
+  font-family: "MyFont.ttf";
+`;
 
 const App = () => {
   const [selected, setSelected] = useState<string>("Dashboard");
 
   return (
-    <Box display="flex" height="100vh">
+    <StyledBox>
       <Sidebar selected={selected} setSelected={setSelected} />
       <Box flex={1} p={4}>
-        <Typography variant="h4" sx={{ fontFamily: "MyFont.ttf" }}>
+        <StyledTypography variant="h4">
           {selected}
-        </Typography>
+        </StyledTypography>
       </Box>
-    </Box>
+    </StyledBox>
   );
 };
 
