@@ -1,8 +1,8 @@
 import { useState } from "react";
 import Sidebar from "./components/organisms/SideBar";
 import { Box } from "@mui/material";
-import CustomTypography from "../../atoms/Typography";
-import { styled } from "@mui/system"; 
+import CustomTypography from "./components/atoms/Typography";
+import { styled } from "@mui/system";
 
 const StyledBox = styled(Box)`
   display: flex;
@@ -20,9 +20,7 @@ const App = () => {
     <StyledBox>
       <Sidebar selected={selected} setSelected={setSelected} />
       <Box flex={1} p={4}>
-        <StyledTypography variant="h4">
-          {selected}
-        </StyledTypography>
+        <StyledTypography variant="h4">{selected}</StyledTypography>
       </Box>
     </StyledBox>
   );
