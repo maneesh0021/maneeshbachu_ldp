@@ -2,14 +2,14 @@ import React from "react";
 import { Typography, TypographyProps } from "@mui/material";
 
 export interface CustomTypographyProps extends TypographyProps {
-  text: string;
+  text?: string;
 }
 
 const CustomTypography: React.FC<CustomTypographyProps> = ({
-  text,
+  children,
   ...typographyProps
 }) => {
-  return <Typography {...typographyProps}>{text}</Typography>;
+  return <Typography {...typographyProps}>{children}</Typography>;
 };
 
 export default CustomTypography;
