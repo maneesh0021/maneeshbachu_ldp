@@ -1,14 +1,35 @@
 import React, { useState, useEffect } from "react";
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, styled } from "@mui/material";
 import IconLabel from "../../molecules/IconLabel";
 import { NAV_ITEMS } from "../../../utils/constants";
 
-interface Props {
+export interface SidebarProps {
   selected: string;
   setSelected: (value: string) => void;
 }
 
-const Sidebar: React.FC<Props> = ({ selected, setSelected }) => {
+const SidebarContainer = styled(Box)({
+  width: "15rem",
+  backgroundColor: "#f5f5f5",
+  padding: "0.90rem",
+});
+
+const SidebarTitle = styled(Typography)({
+  marginBottom: "1rem",
+});
+
+const NavItem = styled(Box)<{ isSelected: boolean }>(({ isSelected }) => ({
+  padding: "0.5rem",
+  marginBottom: "0.5rem",
+  borderRadius: "0.5rem",
+  cursor: "pointer",
+  backgroundColor: isSelected ? "#e0f0ff" : "transparent",
+  "&:hover": {
+    backgroundColor: "#e6f7ff",
+  },
+}));
+
+const Sidebar: React.FC<SidebarProps> = ({ selected, setSelected }) => {
   const [prevSelected, setPrevSelected] = useState<string>("");
 
   useEffect(() => {
@@ -21,29 +42,20 @@ const Sidebar: React.FC<Props> = ({ selected, setSelected }) => {
   };
 
   return (
-    <Box width="15rem" bgcolor="#f5f5f5" p="0.90rem">
-      <Typography variant="h6" color="textPrimary" mb="1rem">
+    <SidebarContainer>
+      <SidebarTitle variant="h6" color="textPrimary">
         RECRUIT
-      </Typography>
+      </SidebarTitle>
       {NAV_ITEMS.map((item) => (
-        <Box
+        <NavItem
           key={item?.label}
-          p="0.5rem"
-          mb="0.5rem"
-          borderRadius="0.5rem"
-          bgcolor={item?.label === selected ? "#e0f0ff" : "transparent"}
-          sx={{
-            cursor: "pointer",
-            "&:hover": {
-              bgcolor: "#e6f7ff",
-            },
-          }}
+          isSelected={item?.label === selected}
           onClick={() => handleItemClick(item?.label || "")}
         >
           <IconLabel icon={item?.icon} text={item?.label || ""} />
-        </Box>
+        </NavItem>
       ))}
-    </Box>
+    </SidebarContainer>
   );
 };
 

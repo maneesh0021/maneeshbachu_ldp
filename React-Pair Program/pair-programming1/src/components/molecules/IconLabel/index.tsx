@@ -2,12 +2,12 @@ import React from "react";
 import { Typography, Box } from "@mui/material";
 import Icon from "../../atoms/Icon";
 
-interface Props {
+export interface IconLabelProps {
   icon: string;
   text: string;
 }
 
-const IconLabel: React.FC<Props> = ({ icon, text }) => {
+const IconLabel: React.FC<IconLabelProps> = ({ icon, text }) => {
   return (
     <Box display="flex" alignItems="center">
       <Box mr={1.5}>

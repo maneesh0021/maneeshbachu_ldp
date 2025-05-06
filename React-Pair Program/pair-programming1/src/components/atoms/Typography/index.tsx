@@ -1,12 +1,15 @@
 import React from "react";
-import { Typography } from "@mui/material";
+import { Typography, TypographyProps } from "@mui/material";
 
-interface Props {
+export interface CustomTypographyProps extends TypographyProps {
   text: string;
 }
 
-const TypographyText: React.FC<Props> = ({ text }) => {
-  return <Typography>{text}</Typography>;
+const CustomTypography: React.FC<CustomTypographyProps> = ({
+  text,
+  ...typographyProps
+}) => {
+  return <Typography {...typographyProps}>{text}</Typography>;
 };
 
-export default TypographyText;
+export default CustomTypography;
