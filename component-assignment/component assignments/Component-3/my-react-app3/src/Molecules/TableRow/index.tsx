@@ -1,4 +1,4 @@
-import React from "react";
+import React, { JSX } from "react";
 import Text from "../../Atoms/Text";
 import "./index.css";
 
@@ -24,26 +24,17 @@ const TableRow: React.FC<TableRowProps> = ({
   subAmount,
   checked,
   onToggle,
-}) => (
-  <tr className={`table-row ${checked ? "row-selected" : ""}`}>
-    <td>
-      <input type="checkbox" checked={checked} onChange={onToggle} />
-    </td>
-    <td>
-      <Text>{name}</Text>
-    </td>
-    <td>
-      <Text>{type}</Text>
-    </td>
-    <td>
-      <Text>{payment}</Text>
-    </td>
-    <td>
+}) => {
+  const rowData: (JSX.Element | string)[] = [
+    <Text>{name}</Text>,
+    <Text>{type}</Text>,
+    <Text>{payment}</Text>,
+    <>
       <Text>{term}</Text>
       <br />
       <span className="sub-text">{fee}</span>
-    </td>
-    <td>
+    </>,
+    <>
       <Text>{amount}</Text>
       {subAmount && (
         <>
@@ -51,8 +42,19 @@ const TableRow: React.FC<TableRowProps> = ({
           <span className="sub-text">{subAmount}</span>
         </>
       )}
-    </td>
-  </tr>
-);
+    </>,
+  ];
+
+  return (
+    <tr className={`table-row ${checked ? "row-selected" : ""}`}>
+      <td>
+        <input type="checkbox" checked={checked} onChange={onToggle} />
+      </td>
+      {rowData.map((item, index) => (
+        <td key={index}>{item}</td>
+      ))}
+    </tr>
+  );
+};
 
 export default TableRow;
