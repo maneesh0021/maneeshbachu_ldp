@@ -1,4 +1,4 @@
-import CashAccelerationTemplate from "../templates/CashAccelerationTemplate";
+import CashAccelerationTemplate from "../components/templates/CashAccelerationTemplate";
 
 const CashAccelerationPage = () => <CashAccelerationTemplate />;
 
