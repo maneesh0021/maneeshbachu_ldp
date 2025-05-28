@@ -1,3 +1,11 @@
+export const ASSET_TABLE_HEADERS = [
+  "Asset Name",
+  "Price",
+  "Change",
+  "Market Cap",
+  "Watch",
+];
+
 export const assetData = [
   {
     id: "btc",

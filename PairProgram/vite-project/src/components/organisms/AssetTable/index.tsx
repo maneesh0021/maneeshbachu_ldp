@@ -7,6 +7,7 @@ import TableRow from "@mui/material/TableRow";
 import { styled } from "@mui/material/styles";
 import type { AssetType } from "../../../utils/types";
 import AssetRow from "../../molecules/AssetRow";
+import { ASSET_TABLE_HEADERS } from "../../../utils/constants";
 
 interface Props {
   assets: AssetType[];
@@ -30,11 +31,9 @@ const AssetTable: React.FC<Props> = ({ assets, starredAssets, toggleStar }) => {
       <Table>
         <StyledTableHead>
           <TableRow>
-            <TableCell>Asset Name</TableCell>
-            <TableCell>Price</TableCell>
-            <TableCell>Change</TableCell>
-            <TableCell>Market Cap</TableCell>
-            <TableCell>Watch</TableCell>
+            {ASSET_TABLE_HEADERS.map((header) => (
+              <TableCell key={header}>{header}</TableCell>
+            ))}
           </TableRow>
         </StyledTableHead>
         <TableBody>
