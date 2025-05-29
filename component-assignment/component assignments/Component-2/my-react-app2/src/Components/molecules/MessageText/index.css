@@ -1,0 +1,14 @@
+.message-block {
+  color: white;
+  max-width: 400px;
+}
+
+.message-block h1 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.message-block p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}

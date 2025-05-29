@@ -1,0 +1,18 @@
+.contract-section {
+  background-color: #0d0d0d;
+  border: 1px solid #5200ff;
+  border-radius: 8px;
+  padding: 20px;
+  color: white;
+  max-width: 800px;
+  margin: auto;
+  font-family: sans-serif;
+}
+
+.section-title {
+  font-size: 1.3em;
+  font-weight: bold;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
