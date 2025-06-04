@@ -15,8 +15,8 @@ class Sparrow extends Bird {
 
 public class LiskovSubstitution {
     public static void main(String[] args) {
-        Bird myBird = new Sparrow(); // subclass used as base type
-        myBird.fly(); // works correctly
+        Bird myBird = new Sparrow(); 
+        myBird.fly(); 
     }
 }
 
