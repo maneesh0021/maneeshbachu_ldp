@@ -1,4 +1,4 @@
-package solidprinciplesdemo.DependencyInversion;
+package solidprinciplesdemo.dependencyinversion;
 
 interface Keyboard {
     String getInput();

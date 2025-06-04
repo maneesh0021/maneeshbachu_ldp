@@ -1,4 +1,4 @@
-package solidprinciplesdemo.LiskovSubstitution;
+package solidprinciplesdemo.liskovsubstitution;
 
 class Bird {
     void fly() {
@@ -15,8 +15,8 @@ class Sparrow extends Bird {
 
 public class LiskovSubstitution {
     public static void main(String[] args) {
-        Bird myBird = new Sparrow(); 
-        myBird.fly(); 
+        Bird myBird = new Sparrow();
+        myBird.fly();
     }
 }
 

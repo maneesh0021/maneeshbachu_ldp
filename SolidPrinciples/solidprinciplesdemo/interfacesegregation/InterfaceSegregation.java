@@ -1,4 +1,4 @@
-package solidprinciplesdemo.InterfaceSegregation;
+package solidprinciplesdemo.interfacesegregation;
 
 interface Printer {
     void print();

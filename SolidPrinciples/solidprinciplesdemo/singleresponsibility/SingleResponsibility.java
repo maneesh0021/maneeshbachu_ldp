@@ -1,4 +1,4 @@
-package solidprinciplesdemo.SingleResponsibility;
+package solidprinciplesdemo.singleresponsibility;
 
 class Employee {
     String name;

@@ -1,4 +1,4 @@
-package solidprinciplesdemo.OC;
+package solidprinciplesdemo.openclosed;
 
 interface Shape {
     double area();
