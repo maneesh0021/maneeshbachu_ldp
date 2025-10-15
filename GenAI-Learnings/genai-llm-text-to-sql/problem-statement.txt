@@ -1,0 +1,5 @@
+Task : Text to SQL:
+develop a system that leverages Large Language Models (LLMs) to convert 
+natural language text into accurate and optimized SQL queries. 
+By enabling users to interact with databases using plain language. 
+you can take up your own use case and develop it.
