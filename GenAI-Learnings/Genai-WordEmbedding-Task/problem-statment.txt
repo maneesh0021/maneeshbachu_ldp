@@ -1,0 +1,1 @@
+Task: Explore different Open Source Sentence transformers (Use Google Colab / Jupyter Notebook)
