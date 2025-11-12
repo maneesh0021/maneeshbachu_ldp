@@ -1,0 +1,6 @@
+Asset ID,Asset Type,Quantity,Market Price (USD),Sector,Current Value
+APL-1,Equity,1000,150.20,Tech,150200
+TSL-2,Equity,500,280.50,Auto,140250
+BND-A,Corporate Bond,2000,980.00,Financial,1960000
+USD-EUR,FX Forward,50000,1.0850,Currency,54250
+MSF-3,Equity,800,320.75,Tech,256600
